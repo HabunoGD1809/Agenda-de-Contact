@@ -1,0 +1,35 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+
+export const ContactInfo = ({ contact, setDataToEdit, deleteContact }) => {
+   const { id, name, phone } = contact;
+
+   return (
+      <div className="p-2">
+         <div role="alert" className="alert-info">
+            <div className="d-flex justify-content-between align-items-center">
+               <div className="pt-2 ps-2 text-white">
+                  <h5>{name}</h5>
+                  <h6>{phone}</h6>
+               </div>
+               <div>
+                  <button
+                     type="button"
+                     className="btn btn-outline-success bt-sm mx-3"
+                     onClick={() => setDataToEdit(contact)}
+                  >
+                     <i className="bi bi-pencil"></i>
+                  </button>
+                  <button
+                     type="button"
+                     className="btn btn-outline-danger bt-sm mx-3"
+                     onClick={() => deleteContact(id)}
+                  >
+                     <i className="bi bi-trash"></i>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   );
+};
