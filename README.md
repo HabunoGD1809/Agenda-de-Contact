@@ -45,7 +45,7 @@ npm run dev
 ## Estructura del proyecto
 
 ```
-phonebook-app/
+agendaContact/
 ├── node_modules/
 ├── public/
 ├── src/
